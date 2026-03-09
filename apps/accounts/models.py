@@ -18,10 +18,11 @@ class User(BaseModel, AbstractBaseUser, PermissionsMixin):
     REQUIRED_FIELDS = [] #This is a extra field that asks in CLI
 
     class Meta:
+        #This sorts based on newest first.
         ordering = ["-created_at"]
 
     def __str__(self):
         return self.email
     
 
-    
+
